@@ -12,7 +12,7 @@ const firebaseConfig = {
 
 // Initialize Firebase Realtime Sync Engine
 let db = null;
-if(firebaseConfig.apiKey !== "AIzaSyB5U5YaSWsB0nwPBfZoFFbM7EM4_WiZ45A") {
+if(firebaseConfig.apiKey !== "YOUR_API_KEY") {
     firebase.initializeApp(firebaseConfig);
     db = firebase.database();
     document.getElementById('log-box').innerText = "System online. Realtime network connection stable.\n";
