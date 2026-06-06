@@ -1,13 +1,14 @@
 // Firebase Configuration - MUST BE IDENTICAL TO THE MAIN LUDO APP
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyB5U5YaSWsB0nwPBfZoFFbM7EM4_WiZ45A",
+    authDomain: "aryan-ludo.firebaseapp.com",
+    databaseURL: "https://aryan-ludo-default-rtdb.firebaseio.com/",
+    projectId: "aryan-ludo",
+    storageBucket: "aryan-ludo.firebasestorage.app",
+    messagingSenderId: "826375754084",
+    appId: "1:826375754084:web:11a74b9ca1dbd659ab2a71"
 };
+
 
 // Initialize Firebase Realtime Sync Engine
 let db = null;
