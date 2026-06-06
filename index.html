@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Secret Command Center</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <!-- Firebase SDK Compat Core -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="panel-container">
+        <header>
+            <h1>LUDO SYSTEM CONTROLLER</h1>
+            <p>Select target player and click desired next dice value output.</p>
+        </header>
+        
+        <div class="control-grid">
+            <!-- RED PLAYER CARD -->
+            <div class="player-card card-red">
+                <h2>RED PLAYER</h2>
+                <div class="button-row">
+                    <button onclick="sendRigCommand('red', 1)">1</button>
+                    <button onclick="sendRigCommand('red', 2)">2</button>
+                    <button onclick="sendRigCommand('red', 3)">3</button>
+                    <button onclick="sendRigCommand('red', 4)">4</button>
+                    <button onclick="sendRigCommand('red', 5)">5</button>
+                    <button onclick="sendRigCommand('red', 6)">6</button>
+                </div>
+                <div class="status-indicator" id="status-red">Status: Normal Random</div>
+            </div>
+
+            <!-- GREEN PLAYER CARD -->
+            <div class="player-card card-green">
+                <h2>GREEN PLAYER</h2>
+                <div class="button-row">
+                    <button onclick="sendRigCommand('green', 1)">1</button>
+                    <button onclick="sendRigCommand('green', 2)">2</button>
+                    <button onclick="sendRigCommand('green', 3)">3</button>
+                    <button onclick="sendRigCommand('green', 4)">4</button>
+                    <button onclick="sendRigCommand('green', 5)">5</button>
+                    <button onclick="sendRigCommand('green', 6)">6</button>
+                </div>
+                <div class="status-indicator" id="status-green">Status: Normal Random</div>
+            </div>
+
+            <!-- YELLOW PLAYER CARD -->
+            <div class="player-card card-yellow">
+                <h2>YELLOW PLAYER</h2>
+                <div class="button-row">
+                    <button onclick="sendRigCommand('yellow', 1)">1</button>
+                    <button onclick="sendRigCommand('yellow', 2)">2</button>
+                    <button onclick="sendRigCommand('yellow', 3)">3</button>
+                    <button onclick="sendRigCommand('yellow', 4)">4</button>
+                    <button onclick="sendRigCommand('yellow', 5)">5</button>
+                    <button onclick="sendRigCommand('yellow', 6)">6</button>
+                </div>
+                <div class="status-indicator" id="status-yellow">Status: Normal Random</div>
+            </div>
+
+            <!-- BLUE PLAYER CARD -->
+            <div class="player-card card-blue">
+                <h2>BLUE PLAYER</h2>
+                <div class="button-row">
+                    <button onclick="sendRigCommand('blue', 1)">1</button>
+                    <button onclick="sendRigCommand('blue', 2)">2</button>
+                    <button onclick="sendRigCommand('blue', 3)">3</button>
+                    <button onclick="sendRigCommand('blue', 4)">4</button>
+                    <button onclick="sendRigCommand('blue', 5)">5</button>
+                    <button onclick="sendRigCommand('blue', 6)">6</button>
+                </div>
+                <div class="status-indicator" id="status-blue">Status: Normal Random</div>
+            </div>
+        </div>
+        
+        <div class="system-logs">
+            <h3>Live Transmission Logs:</h3>
+            <div id="log-box">System ready. Establish Firebase connection configs to activate sync.</div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
